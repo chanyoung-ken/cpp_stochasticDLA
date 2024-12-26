@@ -50,7 +50,7 @@ void save_simulation_data_gz(
                           + std::to_string(p_initial) 
                           + "_step_" + std::to_string(step) + ".csv.gz";
 
-    // CSV 형태의 데이터를 문자열로 만든다
+    // CSV 형태의 데이터를 문자열로 생성
     // 첫 행: "x,y,z,step"
     std::string csv_data = "x,y,z,step\n";
 
@@ -165,7 +165,7 @@ int main() {
         // 증착 5만 개 달성 후, 최종 상태를 gzip CSV로 저장
         save_simulation_data_gz(grid, L, total_height, step, main_directory, p_initial);
 
-        // 최종 요약 출력
+        // 최종 summary 출력
         std::cout << "\n시뮬레이션 완료 (p = " << p_initial << "):" << std::endl;
         std::cout << "총 발사된 입자: " << launched_count << std::endl;
         std::cout << "총 증착된 입자: " << deposited_count << std::endl;
